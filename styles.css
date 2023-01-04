@@ -17,6 +17,8 @@ body {
 {
     display: none;
 }
+
+/* Aquí van los estilos del menu */
 nav {
     display: flex;
     justify-content: space-between;
@@ -82,6 +84,7 @@ nav {
     align-items: center;
 }
 
+/* Aquí van los estilos del menu en desktop */
 .desktop-menu {
     position:absolute;
     background: var(--white);
@@ -151,15 +154,16 @@ nav {
     font-size: var(--sm);
     color: var(--hospital-green) !important;
 }
-aside {
+
+/* Aquí van los estilos del carrito */
+#shoppingCartContainer
+{
     background: var(--white);
     width: 360px;
     box-sizing: border-box;
     position: absolute;
+    padding-bottom: 24px;
     right: 0;
-}
-#shoppingCartContainer
-{
     padding: 0 24px;
 }
 .title-container {
@@ -229,6 +233,8 @@ aside {
     font-weight: bold;
     height: 50px;
 }
+
+/* Aquí va los estilos de la lista de productos */
 .cards-container {
     margin-top: 20px;
     display: grid;
@@ -270,18 +276,28 @@ aside {
     margin-bottom: 0;
     color: var(--very-light-pink);
   }
+
   /* Aquí van los estilos de los detalles del producto */
-  
-  .product-detail-close {
-    background: var(--white);
-    width: 14px;
-    height: 14px;
-    position: abolute;
-    top: 24px;
-    left: 24px;
-    z-index: 2;
-    padding: 12px;
-    border-radius: 50%;
+  #productDetail
+  {
+    width: 360px;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 24px;
+    position: absolute;
+    left: 500px;
+    background-color: white;
+  }
+.product-detail-close {
+      background: var(--white);
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 2;
+      padding: 12px;
+      border-radius: 50%;
   }
   .product-detail-close:hover {
     cursor: pointer;
@@ -290,7 +306,7 @@ aside {
     width: 100%;
     height: 360px;
     object-fit: cover;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
   }
   #productDetail .product-info {
     margin: 24px 24px 0 24px;
@@ -352,9 +368,15 @@ aside {
     {
         display: none;
     }
-    aside {
+    #productDetail, 
+    #shoppingCartContainer {
         width: 100%;
+        left: 0;
+        right: 0;
     } 
+    #productDetail > img:nth-child(2) {
+        border-radius: 0px;
+      }
     .cards-container {
         grid-template-columns: repeat(auto-fill, 140px);
       }
